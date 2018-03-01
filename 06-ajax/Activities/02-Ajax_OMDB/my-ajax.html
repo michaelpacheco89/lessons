@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax call</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var title = "game+of+thrones";
+	var queryURL = "http://www.omdbapi.com/?s=game+of+thrones&y=&plot=short&apikey=40e9cece";
+
+	$.ajax({
+		url: queryURL,
+		method: "GET"
+	}).done(function(show){
+		console.log(show.Search[3].Title)
+		console.log(show.Search[5].Poster)
+	});
+
+</script>
+	
+</body>
+</html>

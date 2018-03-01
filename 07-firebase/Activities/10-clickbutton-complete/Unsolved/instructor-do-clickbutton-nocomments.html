@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Click Button with Firebase!</title>
+
+    <!-- FIREBASE JAVASCRIPT LINK-->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- SOME TEXT-->
+    <h1>Ouch! You've clicked me <span id="click-value"></span> times!</h1>
+
+    <!--BUTTON TEXT -->
+    <button id="click-button">Click Me!!!!</button>
+
+    <!-- JQUERY LINK-->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+
+  <!-- ================================================================================== -->
+    <script>
+// INITIALIZING FIREBASE
+  
+  var config = {
+    apiKey: "AIzaSyDHBPVphHjZyuMhBVswYxLrKda51jnwha8",
+    authDomain: "first-firebase-project-cdd27.firebaseapp.com",
+    databaseURL: "https://first-firebase-project-cdd27.firebaseio.com",
+    projectId: "first-firebase-project-cdd27",
+    storageBucket: "first-firebase-project-cdd27.appspot.com",
+    messagingSenderId: "860114293605"
+  };
+  firebase.initializeApp(config);
+
+    // VARIABLES
+    // --------------------------------------------------------------------------------
+    // SETTING FIREBASE SYNTAX EQUAL TO DATABASE FOR EASIER/SHORTER TYPING.
+    var database = firebase.database();
+    var clickCounter = 0;
+
+    // FUNCTIONS + EVENTS
+    // --------------------------------------------------------------------------------
+    //LISTENING FOR CLICK, WHENEVER CLICKED ADDS 1 TO CLICK COUNTER 
+
+    $("#click-button").on("click", function() {
+      clickCounter++;
+      database.ref().set({
+        clickCount: clickCounter
+      });
+    });
+
+    // MAIN PROCESS + INITIAL CODE
+    // --------------------------------------------------------------------------------
+    // ANYTIME ANY PROPERTY CHANGES, IT IS UPDATED IN REAL TIME 
+
+    database.ref().on("value", function(snapshot) {
+      console.log(snapshot.val());
+      $("#click-value").html(snapshot.val().clickCount);
+      clickCounter = snapshot.val().clickCount;
+    }, function(errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+
+    </script>
+
+  </body>
+
+</html>

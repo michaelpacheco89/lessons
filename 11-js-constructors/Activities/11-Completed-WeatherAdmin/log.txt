@@ -1,0 +1,6 @@
+Name: mike; Location: san francisco; Date: Tue Aug 15 2017 14:11:43 GMT-0700 (PDT)
+Name: rick; Location: bentonville; Date: Tue Aug 15 2017 14:36:26 GMT-0700 (PDT)
+Name: john ; Location: fayetteville; Date: Tue Aug 15 2017 14:38:27 GMT-0700 (PDT)
+Name: bob; Location: los angeles; Date: Tue Aug 15 2017 14:42:52 GMT-0700 (PDT)
+Name: test; Location: las vegas; Date: Tue Aug 15 2017 14:48:09 GMT-0700 (PDT)
+Name: Javi; Location: Los angeles; Date: Tue Aug 15 2017 14:48:43 GMT-0700 (PDT)

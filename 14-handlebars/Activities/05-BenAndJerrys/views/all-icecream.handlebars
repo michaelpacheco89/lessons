@@ -1,0 +1,19 @@
+<style media="screen">
+  li {
+    height : 100px;
+    width: 150px;
+    text-align: center;
+    color: red;
+    background-color: purple;
+    margin-bottom: 30px;
+  }
+</style>
+
+<h1>Icecream Flavors</h1>
+
+<ul>
+{{#each flavors }}
+  <li>flavor: {{name}}<br>price: {{price}}<br>awesomeness: {{awesomeness}}</li>
+{{/each}}
+
+</ul>

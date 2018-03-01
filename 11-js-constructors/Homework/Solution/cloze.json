@@ -1,0 +1,26 @@
+[
+  {
+    "partial": "George Washington was the first president of the United States.",
+    "cloze": "Washington"
+  },
+  {
+    "partial": "The Treaty of Paris was an agreement signed by British and American leaders that stated the United States of America was a free and independent country.",
+    "cloze": "Treaty of Paris"
+  },
+  {
+    "partial": "The Puritans were an English religious sect who hoped to 'purify' the Anglican church of Roman Catholic traces in practice & organization.",
+    "cloze": "Puritans"
+  },
+  {
+    "partial": "In 1807, the Embargo Act prohibited all foreign trade.",
+    "cloze": "Embargo"
+  },
+  {
+    "partial": "The Great War was the term used to describe World War I at the time of the war.",
+    "cloze": "Great"
+  },
+  {
+    "partial": "Thomas Edison is credited with the invention of the incandescent lightbulb.",
+    "cloze": "Edison"
+  }
+]

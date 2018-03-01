@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style type="text/css">
+    
+  h3:hover {
+  
+  cursor: pointer;
+
+  }
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="grilledcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+  <div class="pic"></div>
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the JavaScript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function() {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+
+      var peanut = 0;
+
+      var cheese =0;
+
+      var beefy = 0;
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+
+      $("#pbj").on("click",function(){
+        alert("MMMMMM peanut butter");
+        peanut++
+        alert ("You've eaten " + peanut + " peanut butter jelly sandwiches");
+        $(".pic").html("<img src ='http://www.cstoredecisions.com/wp-content/uploads/2015/10/PBJ-Sandwich.jpg'/> ")
+
+      });
+
+       // ...
+
+
+       $("#roastbeef").on("click",function(){
+        alert("WHAAT?? ROAST BEEF??? HELL YES!!");
+        beefy++
+        alert ("You've eaten " + beefy + " roast beef sandwiches");
+        $(".pic").html("<img src ='https://emeals-menubuilder.s3.amazonaws.com/v1/recipes/467491/pictures/large_warm-roast-beef-sandwiches.jpg'/> ")
+      });
+
+
+
+       $("#grilledcheese").on("click",function(){
+        alert("Yum Grilled Cheese!! ");
+        cheese++
+        alert ("You've eaten " + cheese + " grilled cheese sandwiches");
+        $(".pic").html("<img src ='http://grilledcheesesocial.com/wp-content/uploads/2016/04/grilled-cheese-social-how-to-basics.jpg'/> ")
+      });
+
+
+
+
+    });
+
+</script>
+
+</body>
+
+</html>

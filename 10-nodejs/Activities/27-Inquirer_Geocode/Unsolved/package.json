@@ -1,0 +1,17 @@
+{
+  "name": "unsolved",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inquirerGeocode.js",
+  "dependencies": {
+    "geocoder": "^0.2.3",
+    "inquirer": "^3.2.1",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

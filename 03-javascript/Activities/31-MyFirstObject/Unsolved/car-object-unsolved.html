@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Object</title>
+  </head>
+  <body>
+  <h1>CAR ADVENTURES!!</h1>
+
+  <P><strong>
+    Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.
+    <br>
+    See console for car stats.
+  </strong></P>
+
+
+
+    <script>
+
+      var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+
+        function reWriteStats() {
+          console.log("Make:" + car.make);
+          console.log("Model:" + car.model);
+          console.log("Color:" + car.color);
+          console.log("Mileage:" + car.mileage);
+          console.log("Is working:" + car.isWorking);
+        }
+
+
+      document.onkeyup = function(event){
+        if(event.key=="h"){
+          car.honk();
+        }
+
+        else if(event.key=="d"){
+          car.driveToWork();
+        }
+
+
+        else if(event.key=="t"){
+          car.getTuneUp();
+        }
+
+
+         else if(event.key=="w"){
+          car.driveAroundWorld();
+        }
+
+        else{
+          alert("invalid command")
+        }
+
+      
+
+      };
+
+
+    </script>
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+

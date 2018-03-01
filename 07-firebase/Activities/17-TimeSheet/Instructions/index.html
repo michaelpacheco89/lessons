@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Employee Tracker</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Bootswatch Styling for Improving the Aesthetics -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+ 
+        <div class="jumbotron">
+            <h1 class="text-center"><strong></i>Employee Tracker</strong></h1>
+        </div>
+
+<div class="panel panel-default">
+ <table class="table">
+ <div class="panel-heading">
+<i class="fa fa-list-alt"></i>Current Employees
+</div>
+ <thead>
+      <tr>
+        <th>Employee Name</th>
+        <th>Role</th>
+        <th>Start Date</th>
+        <th>Months Worked</th>
+        <th>Monthly Rate ($)</th>
+        <th>Total Billed ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+    <!--populate dynamically created row elements here-->
+
+    </tbody>
+  </table>
+  </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-list-alt"></i> Add Employee
+                    </div>
+                    <div class="panel-body">
+                        <form id="artist-form">
+                            <div class="form-group">
+                                <label for="employee-name">Employee Name:</label>
+                                <input type="text" class="form-control" id="employee-name" placeholder="your name">
+                            </div>
+                                <div class="employee-role">
+                                <label for="start-year">Employee Role:</label>
+                                <input type="text" class="form-control" id="employee-role" placeholder="your role">
+                            </div>
+                            <div class="start-date">
+                                <label for="start-date">Start Date:</label>
+                                <input type="date" class="form-control" id="start-date" placeholder="mm/dd/year">
+                            </div>
+                            <div class="monthly-rate">
+                                <label for="monthly-rate">Monthly Rate:</label>
+                                <input type="number" class="form-control" id="monthly-rate" placeholder="your salary">
+                            </div>
+                            <br>
+                            <button class="btn" id="submit-search-info"><span class="glyphicon glyphicon-search"></span>Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

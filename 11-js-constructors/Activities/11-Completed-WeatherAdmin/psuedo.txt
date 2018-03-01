@@ -1,0 +1,7 @@
+...
+getDate()
+
+getDay()
+
+getFullYear()
+....

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>trivia game</title>
+</head>
+<body>
+	<h1><strong>
+		Question Game!!
+	</strong></h1>	
+
+<script>
+var score = 0;
+var counter = 1;
+	
+var questions = {
+	q1: ["grass is green", "t"]
+	q2: ["ocean is salty", "t"]
+	q3: ["dogs meow", "f"]
+	q4: ["grapes are round", "t"]
+	q5: ["centaurs are real", "f"]
+	q6: ["voldemort is nice", "f"]
+	q7: ["cats exist", "t"]
+	q8: ["sky is green", "f"]
+	q9: ["Bojack has a drinking problem", "t"]
+	q10: ["puppies are cute", "t"]
+
+}
+
+	function displayNext(){
+		document.getElementById('q-placeholder').textContent = questions ["q" + counter][0];
+	}
+
+	displayNext();
+
+	document.onkeyup = function(event){
+		if(event.key === questions ["q" + counter][1]){
+			score++;
+			alert("correct!");
+	
+		}
+		
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+	
+</body>
+</html>
